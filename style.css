@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Hedvig Letters Sans', sans-serif;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(./image/Book-and-Coffee.jpg) no-repeat top/cover;
+    padding: 20px;
+}
+
+/* All Elements :  */
+
+.container {
+    flex-basis: 750px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form.input-area,
+ul.list li.list-item {
+    border-radius: 15px;
+    box-shadow: 10px 10px 25px black;
+    background-color: #ecf0f1;
+}
+
+button {
+    cursor: pointer;
+    font-size: 1.8rem;
+    border-radius: 7px;
+    transition: all .1s;
+}
+
+i {
+    display: block;
+    padding: 4px 5px;
+}
+
+/* Form input section :  */
+
+form.input-area {
+    display: flex;
+    gap: 5px;
+    padding: 2.5rem 4rem;
+}
+
+form.input-area input {
+    width: 100%;
+    padding: 3px;
+    font-size: 1.8rem;
+    text-align: center;
+    border-radius: 7px;
+    border: 2px solid black;
+}
+
+form.input-area input::placeholder {
+    opacity: .6;
+}
+
+form.input-area button {
+    color: #3498db;
+    border: 2px solid #3498db;
+}
+
+form.input-area button:hover {
+    background-color: #3498db;
+    color: #ecf0f1;
+}
+
+/* List item section : */
+
+ul.list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 2rem;
+}
+
+ul.list li.list-item {
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+ul.list li.list-item .buttons {
+        display: flex;
+        gap: 5px;
+}
+
+ul.list li.list-item .buttons button:first-child {
+    border: 2px solid #27ae60;
+    color: #27ae60;
+}
+
+ul.list li.list-item .buttons button:first-child:hover {
+    background-color: #27ae60;
+    color: #ecf0f1;
+}
+
+ul.list li.list-item .buttons button:last-child {
+    border: 2px solid #c0392b;
+    color: #c0392b;
+}
+
+ul.list li.list-item .buttons button:last-child:hover {
+    background-color: #c0392b;
+    color: #ecf0f1;
+}
+
+/* Class to be added with javascript : */
+
+.text-decoration {
+    text-decoration: line-through;
+}
+
+@media (max-width: 572px) {
+    * {
+        font-weight: bold;
+    }
+
+    html {
+        font-size: 8px;
+    }
+
+    .container {
+        gap: 30px;
+    }
+
+    form.input-area,
+    ul.list li.list-item {
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #ecf0f1;
+    }
+
+    form.input-area input {
+        background-color: #ecf0f1;
+        color: black;
+    }
+    
+}
