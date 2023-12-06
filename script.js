@@ -8,10 +8,15 @@ let id;
 //Setting the placeholder : 
 inputTxt.placeholder = `Enter a task (max ${maxtaskItemCount})`;
 
+if(localStorage.getItem("nothingTask") === null) {
+    localStorage.setItem("nothingTask", 1);
+}
+
+
 //Runs when the page load :  
 window.onload = function() {
     
-    if(localStorage.getItem("nothing") == 1) {
+    if(localStorage.getItem("nothingTask") == 1) {
         createTask("Nothing 🤠", 0);
     }        
 
@@ -69,7 +74,7 @@ list.addEventListener("click", (e) => {
 
         if(listItemId === "task-0") {
             console.log(listItemId);
-            localStorage.setItem("nothing", 0);
+            localStorage.setItem("nothingTask", 0);
         } 
 
         localStorage.removeItem(listItemId);
