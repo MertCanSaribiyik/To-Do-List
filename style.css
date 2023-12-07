@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Hedvig Letters Sans', sans-serif;
+    font-weight: bold;
 }
 
 html {
@@ -32,8 +33,9 @@ body {
 form.input-area,
 ul.list li.list-item {
     border-radius: 15px;
-    box-shadow: 10px 10px 25px black;
-    background-color: #ecf0f1;
+    box-shadow: 5px 5px 15px black;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #ecf0f1;
 }
 
 button {
@@ -97,8 +99,8 @@ ul.list li.list-item {
 }
 
 ul.list li.list-item .buttons {
-        display: flex;
-        gap: 5px;
+    display: flex;
+    gap: 5px;
 }
 
 ul.list li.list-item .buttons button:first-child {
@@ -127,11 +129,13 @@ ul.list li.list-item .buttons button:last-child:hover {
     text-decoration: line-through;
 }
 
-@media (max-width: 572px) {
-    * {
-        font-weight: bold;
-    }
+.opacity {
+    opacity: .85;
+}
 
+/* Responsive : */
+
+@media (max-width: 572px) {
     html {
         font-size: 8px;
     }
@@ -140,15 +144,11 @@ ul.list li.list-item .buttons button:last-child:hover {
         gap: 30px;
     }
 
-    form.input-area,
-    ul.list li.list-item {
-        background-color: rgba(0, 0, 0, 0.4);
-        color: #ecf0f1;
+    form.input-area input {
+        font-size: 2rem;
     }
 
-    form.input-area input {
-        background-color: #ecf0f1;
-        color: black;
+    ul.list {
+        gap: 20px;
     }
-    
 }

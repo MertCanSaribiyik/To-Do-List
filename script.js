@@ -8,9 +8,8 @@ let id;
 //Setting the placeholder : 
 inputTxt.placeholder = `Enter a task (max ${maxtaskItemCount})`;
 
-if(localStorage.getItem("nothingTask") === null) {
+if(localStorage.getItem("nothingTask") === null) 
     localStorage.setItem("nothingTask", 1);
-}
 
 
 //Runs when the page load :  
@@ -55,16 +54,13 @@ createTaskBtn.addEventListener("click", (e) => {
 
 });
 
-document.addEventListener("keydown", () => {
-
-});
-
 //Adding event listeners to ul :
 list.addEventListener("click", (e) => {
     //when the check button is clicked :
     if (e.target.classList.contains("fa-check")) {
         const listItem = e.target.parentElement.parentElement.parentElement;
         listItem.classList.toggle("text-decoration");
+        listItem.classList.toggle("opacity");
     }
 
     //When the trash button is clicked : 
